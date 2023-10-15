@@ -29,5 +29,6 @@ THEN I can save my initials and my score
 
 ## Screenshots of app
 
-![main screen of js quiz app](home-screen-js-quiz.png)
-![once the timer starts, this is how the page changes](timer-start-screenshot.png)
+![main screen before questions start](./assets/main-screen.png)
+
+![with the timer started](./assets/with-timer-started.png)
