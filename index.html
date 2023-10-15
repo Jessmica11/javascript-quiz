@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<!--Page properties-->
+<head>
+    <title>Javascript Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="JavaScript Quiz made by Jessica Scheck">
+    <meta name="keywords" content="JavaScript, UNC, web development">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+</head>
+
+<body>
+    <!--Span heading at top of page-->
+    <header>
+        <div class="top-row">
+            <a href="">View Highscores</a>
+            <!--Timer area-->
+            <span id="timer">Time:</span> <span id="seconds-left"></span>
+        </div>
+    </header>
+
+    <!--Main quiz card-->
+    <main>
+        <!--First "page" of quiz-->
+        <div class="quiz-container">
+            <div id="quiz-info">
+                <h2>Javascript Coding Quiz</h2>
+                <p>🏆 Test your knowledge of Javascript, are you ready? 🏆</p>
+                <button id="start-button">Let's Start!</button>
+            </div> 
+
+        <!--Multiple choice card-->
+    <div class="question-container">
+        <h2 id="question-area">Click start to see your first question</h2>
+        <div id="answer-area">
+            <button class="option-button">1. </button>
+            <button class="option-button">2. </button>
+            <button class="option-button">3. </button>
+            <button class="option-button">4. </button>
+        </div>
+        <button class="submit-button">Submit Answer</button>
+    </div>
+
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

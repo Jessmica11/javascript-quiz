@@ -1,0 +1,130 @@
+:root {
+    --background-color: #d9e4ff;
+    --text-color: #000;
+    --button-color: #faaf90;
+    --button-hover: #fcc9b5;
+    --top-row: #b3c7f7;
+    --card-border: #8babf1;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+h2 {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+p {
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--button-color);
+    border: var(--button-color);
+}
+
+button:hover {
+    background-color: var(--button-hover)
+}
+
+.top-row {
+    display: flex;
+    width: auto;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: var(--top-row);
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-container {
+    border: solid .75rem var(--card-border);
+    border-radius: 50px;
+    position: relative;
+    padding: 1rem;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    height: 50vh;
+    width: 100%;
+}
+
+.option-button {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#quiz-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.highscores {
+    width: auto;
+    justify-content: flex-start;
+}
+
+.quiz-timer {
+    width: auto;
+}
+
+.timer-text {
+    justify-content: flex-end;
+}
+
+#start-button {
+    margin: 1rem;
+}
+
+#button {
+    background-color: var(--button-color);
+    border-radius: 25px;
+    justify-content: center;
+    position: relative;
+}
+
+#button:hover {
+    background-color: #fcc9b5;
+}
+
+#question-area {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#answer-area {
+    color: #000;
+    justify-content: center;
+    margin: 1rem;
+}
+
