@@ -28,19 +28,21 @@
             <div id="quiz-info">
                 <h2>Javascript Coding Quiz</h2>
                 <p>🏆 Test your knowledge of Javascript, are you ready? 🏆</p>
-                <button id="start-button">Let's Start!</button>
+                <button id="start-button" onclick="showQuiz()">Let's Start!</button>
             </div> 
+        </div>
 
         <!--Multiple choice card-->
-    <div class="question-container">
-        <h2 id="question-area">Click start to see your first question</h2>
-        <div id="answer-area">
-            <button class="option-button">1. </button>
-            <button class="option-button">2. </button>
-            <button class="option-button">3. </button>
-            <button class="option-button">4. </button>
+    <div class="quiz">
+        <div id="question">Click start to see your first question</div>
+        <div id="answer-buttons">
+            <button class="btn" onclick="checkAnswer(0)">1. </button>
+            <button class="btn" onclick="checkAnswer(1)">2. </button>
+            <button class="btn" onclick="checkAnswer(2)">3. </button>
+            <button class="btn" onclick="checkAnswer(3)">4. </button>
         </div>
-        <button class="submit-button">Submit Answer</button>
+        <button id="submit-button">Submit</button>
+        <p id="feedback"></p>
     </div>
 
     </main>

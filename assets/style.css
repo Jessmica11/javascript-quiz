@@ -14,8 +14,9 @@
 
 main {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
+    height: fit-content;
 }
 
 h2 {
@@ -28,11 +29,18 @@ h2 {
 p {
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    color: #000;
 }
+
 
 button {
     background-color: var(--button-color);
     border: var(--button-color);
+    border-radius: 25px;
+    padding: .5rem;
+    justify-content: center;
+    position: relative;
 }
 
 button:hover {
@@ -50,43 +58,29 @@ button:hover {
     justify-content: space-between;
 }
 
-.quiz-container {
+
+.btn {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: .5rem ;
+    cursor: pointer;
 }
 
-.question-container {
-    border: solid .75rem var(--card-border);
+.quiz {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    border: solid .5rem var(--card-border);
     border-radius: 50px;
-    position: relative;
-    padding: 1rem;
-    margin: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background-color);
-    height: 50vh;
-    width: 100%;
+    padding: 1.5rem;
 }
-
-.option-button {
-    display: flex;
-    flex-direction: column;
-}
-
 
 #quiz-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: fit-content;
 }
 
 .highscores {
@@ -106,23 +100,22 @@ button:hover {
     margin: 1rem;
 }
 
-#button {
-    background-color: var(--button-color);
-    border-radius: 25px;
-    justify-content: center;
-    position: relative;
+#submit-button {
+    background-color: lightseagreen;
+    display: none;
 }
 
-#button:hover {
-    background-color: #fcc9b5;
+#submit-button:hover {
+    background-color: green;
 }
 
-#question-area {
+#question {
     font-weight: bolder;
     font-size: larger;
+    text-align: center;
 }
 
-#answer-area {
+#answer-buttons {
     color: #000;
     justify-content: center;
     margin: 1rem;
