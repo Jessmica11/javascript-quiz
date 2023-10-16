@@ -1,7 +1,7 @@
 # Javascript Quiz
 
-My repo link:
-Page link:
+My repo link: https://github.com/Jessmica11/javascript-quiz
+Page link: https://jessmica11.github.io/javascript-quiz/
 
 ## User Story
 
@@ -29,6 +29,8 @@ THEN I can save my initials and my score
 
 ## Screenshots of app
 
-![main screen before questions start](./assets/main-screen.png)
+![main screen before questions start](./assets/quiz-at-start.png)
 
-![with the timer started](./assets/with-timer-started.png)
+![with the timer started](./assets/quiz-with-timer-and-question.png)
+
+![with a feedback response after user makes choice](./assets/quiz-feedback-correct-incorrect.png)
