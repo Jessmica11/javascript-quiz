@@ -41,10 +41,24 @@
             <button class="btn" onclick="checkAnswer(2)">3. </button>
             <button class="btn" onclick="checkAnswer(3)">4. </button>
         </div>
-        <button id="submit-button">Submit</button>
         <p id="feedback"></p>
+        <!--Button to be hidden until end of quiz, will take to high score form-->
+        <button id="finish">Finish Quiz</button>
     </div>
 
+    <!--Layout for Score input at end of quiz-->
+    <div class="scorecard">
+        <h2>Add Your Score</h2>
+        <form id="add-initials" method="POST">
+            <label for="initials">Add Your Initials </label>
+            <input type="text" placeholder="ABC" name="initial-text" id="initial-text" />
+            <button id="add-score">Add to Scoreboard</button>
+        </form>
+        <p>Scoreboard: <span id="user-info"></span></p>
+        <ol id="highscores"></ol>
+            <li id="name"></li>
+            <li id="score"></li>
+    </div>
     </main>
     <script src="./assets/script.js"></script>
 </body>

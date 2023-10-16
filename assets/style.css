@@ -76,16 +76,15 @@ button:hover {
     padding: 1.5rem;
 }
 
-#quiz-info {
-    display: flex;
+.scorecard {
+    display: none;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.highscores {
+    align-items: center;
     width: auto;
-    justify-content: flex-start;
+    border: solid .5rem var(--card-border);
+    border-radius: 50px;
+    padding: 1.5rem;
 }
 
 .quiz-timer {
@@ -96,17 +95,43 @@ button:hover {
     justify-content: flex-end;
 }
 
+#quiz-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #start-button {
+    display: block;
     margin: 1rem;
 }
 
-#submit-button {
-    background-color: lightseagreen;
+#finish {
     display: none;
+    background-color: var(--button-color);
 }
 
-#submit-button:hover {
-    background-color: green;
+#finish:hover {
+    background-color: var(--button-hover);
+}
+
+#submit {
+    background-color: lightseagreen;
+    padding: .5rem;
+}
+
+#submit:hover {
+    background-color: lightgreen;
+}
+
+#restart-button {
+    background-color: var(--button-color);
+    margin: .5rem;
+}
+
+#restart-button:hover {
+    background-color: var(--button-hover);
 }
 
 #question {

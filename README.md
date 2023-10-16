@@ -34,3 +34,5 @@ THEN I can save my initials and my score
 ![with the timer started](./assets/quiz-with-timer-and-question.png)
 
 ![with a feedback response after user makes choice](./assets/quiz-feedback-correct-incorrect.png)
+
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

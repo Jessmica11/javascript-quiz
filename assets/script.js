@@ -7,7 +7,7 @@ var userScore = 0;
 startButton.addEventListener('click', setTime);
 
 var timeEl = document.querySelector("#seconds-left");
-startButton.addEventListener("click", changeContent);
+//startButton.addEventListener("click", changeContent);
 startButton.addEventListener("click", showQuiz);
 
 var mainEl = document.getElementById("timer");
@@ -29,10 +29,13 @@ function setTime() {
   }, 1000);
 }
 
-  // Function to remove start button and replace with other text (to prevent user from clicking over and over)
-  function changeContent() {
-    startButton.innerHTML = "Answer the questions below";
-  }
+  // Function to remove start button after click
+  const startQuizButton = document.getElementById('start-button');
+
+  startQuizButton.addEventListener("click", () => {
+    //  hide "Let's Begin" button 
+    startQuizButton.style.visibility = 'hidden';
+  });
 
   // I want the quiz card to show when the user clicks the start button
   function showQuiz() {
@@ -93,6 +96,7 @@ function checkAnswer(selected) {
     correctAnswers++;
   } else {
     feedback.textContent = "Incorrect!";
+    // will make clock skip ahead 2 seconds at a time for each wrong answer
     secondsLeft--;
   }
 
@@ -109,3 +113,36 @@ function checkAnswer(selected) {
 }
 
 showQuestion();
+
+// Need code for storing score to local storage
+
+
+// Add user initials and score to local storage
+var userInitials = document.querySelector("#initial-text");
+var userScore = correctAnswers
+var quizSubmitButton = document.querySelector("#add-score");
+
+quizSubmitButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  
+  // create user object from submission form area
+  var user = {
+    initials: userInitials.value,
+    score: userScore.value,
+  };
+
+  // set new submission to local storage 
+  localStorage.setItem("user", JSON.stringify(user));
+  
+});
+
+// how to set highscores vs user score
+// score is already saved under variable "correctAnswers"
+highscore = 0
+currentRoundScore = 0
+
+if(currentRoundScore > localStorage.getItem(correctAnswers)){
+  localStorage.setItem("highscore", currentRoundScore);
+}
+
+//show 
