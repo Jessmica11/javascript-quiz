@@ -2,6 +2,7 @@ var startButton = document.querySelector("#start-button");
 var timerEl = document.querySelector("#seconds-left");
 var userChoice = document.querySelector(".btn");
 var userScore = 0;
+var userScores = [];
 
   // add event listener to the button
 startButton.addEventListener('click', setTime);
@@ -96,7 +97,7 @@ function checkAnswer(selected) {
     correctAnswers++;
   } else {
     feedback.textContent = "Incorrect!";
-    // will make clock skip ahead 2 seconds at a time for each wrong answer
+    // will make clock skip ahead 2 seconds for each wrong answer
     secondsLeft--;
   }
 
@@ -108,6 +109,8 @@ function checkAnswer(selected) {
     } else {
       const quizContainer = document.querySelector(".quiz");
       quizContainer.innerHTML = `<p>You got ${correctAnswers} out of ${questions.length} questions.</p>`;
+      const showScores = document.querySelector(".scorecard");
+      showScores.style.display = "block";
     }
   }, 2000);
 }
@@ -117,23 +120,21 @@ showQuestion();
 // Need code for storing score to local storage
 
 
-// Add user initials and score to local storage
-var userInitials = document.querySelector("#initial-text");
-var userScore = correctAnswers
-var quizSubmitButton = document.querySelector("#add-score");
+// submit initials
+var userName = document.getElementById("initials")
+var addToScoreboardButton = document.getElementById("add-score")
+var scoreBoard = document.getElementById("name")
 
-quizSubmitButton.addEventListener("click", function(event) {
-  event.preventDefault();
-  
-  // create user object from submission form area
-  var user = {
-    initials: userInitials.value,
-    score: userScore.value,
-  };
+var highscore = JSON.parse(localStorage.getItem('correctAnswers'))
 
-  // set new submission to local storage 
-  localStorage.setItem("user", JSON.stringify(user));
-  
+  addToScoreboardButton.addEventListener("click", function() {
+    var newHighScore = document.createElement("li")
+    newHighScore.textContent = userName.value
+    scoreBoard.name = userName.value
+    scoreBoard.push(userName.value)
+    divEl.append(newHighScore)
+
+    localStorage.setItem('correctAnswers', JSON.stringify(highscore))
 });
 
 // how to set highscores vs user score
